@@ -1,4 +1,20 @@
-var foodieApp = angular.module('foodieApp',[]);
+var foodieApp = angular.module('foodieApp',['ngRoute']);
+
+foodieApp.config(function ($routeProvider) {
+	$routeProvider
+	.when('/',{
+		templateUrl: 'pages/login.html',
+		controller: 'loginController'
+	})
+	.when('/home',{
+		templateUrl: 'pages/main.html',
+		controller: 'mainController'
+	})
+})
+
+foodieApp.controller('loginController',function($scope) {
+
+})
 
 //controller bnaya h....
 foodieApp.controller('mainController',function($scope) {
